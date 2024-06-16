@@ -1,7 +1,7 @@
 # Sprint 5 Module 1 Project
 
 ## Introduction
-
+[text]
 Welcome to the Sprint 5 Module 1 Project! In this project, you will practice using "vanilla" JavaScript to manipulate the DOM, without any frameworks. Your goal is to build some widgets on a webpage using only JavaScript.
 
 To complete this project, you will need to do the following:
