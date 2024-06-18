@@ -9,20 +9,25 @@ function moduleProject1() {
 
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
   const elems = document.getElementsByTagName('div');
-
   for(let i = 0; i < elems.length; i++){
     elems[i].classList.add('widget');
   }
+  let widgets = document.querySelectorAll('.widget');
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
-  let widgets = document.querySelectorAll('.widget');
   let randomIndex = Math.floor(Math.random() * 10);
-  let quotesE = quotes;
-  let randomQuote = quotesE[randomIndex];
+  let randomQuote = quotes[randomIndex];
+
   let quoteDiv = document.createElement('div');
-  quoteDiv.textContent = randomQuote.text;
+  quoteDiv.textContent = randomQuote.quote;
+
   let authorDiv = document.createElement('div');
-  authorDiv.textContent = randomQuote.author;
+  authorDiv.textContent = randomQuote.author + " in " + randomQuote.date;
+
+  if (randomQuote.date === `null`){
+    console.log(randomQuote.author + " in an unknown date");
+  }
+
   widgets[0].appendChild(quoteDiv);
   widgets[0].appendChild(authorDiv);
   
@@ -40,15 +45,12 @@ function moduleProject1() {
   widgets[1].appendChild(para);
 
   // 👉 TASK 4 - Build a "Countdown" widget
+    // Create the countdown widget
+    let countDownWidget = document.createElement('p');
+
   document.addEventListener('DOMContentLoaded', function() {
 
     let seconds = 5000;
-  
-    // Create the countdown widget
-    let countDownWidget = document.createElement('p');
-    
-    // Append the countdown widget to the third widget
-    widgets[2].appendChild(countDownWidget);
   
     let interval = setInterval(function() {
       // Decrement seconds by 1000 each time the function runs
@@ -70,14 +72,15 @@ function moduleProject1() {
   
     }, 1000); // Run the function every 1000 milliseconds (1 second)
   });
+  
+    
+   // Append the countdown widget to the third widget
+  widgets[2].appendChild(countDownWidget);
 
   // 👉 TASK 5 - Build a "Friends" widget
-  let peopleIdx = Math.floor(Math.random() * 15);
-  let peeps = peopleIdx;
-  let peepsWidget = document.getElementsByClassName('friends');                   
-  let peepsP = document.createElement('p');
-  peepsP.textContent = peeps;
-  widgets[3].appendChild(peepsP);
+  
+
+
   // 👉 TASK 6 - Make it so user can tab through the widgets
   //  ✨ add your code here
 
