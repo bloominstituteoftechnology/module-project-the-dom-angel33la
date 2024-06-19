@@ -186,30 +186,20 @@ You will need `setInterval` and optionally `clearInterval` (research this!). The
   <summary>Click to read</summary>
 
   ---
-This widget will show a random person from the `people` array along with some data related to the person.
-
-Start by selecting a random person from the `people` array in `data.js` using `Math.random`.
-
-Each person has, among other attributes, a `friends` array containing the IDs of some buddies, who also happen to be persons inside the `people` array.
-
+This widget will show a random person from the people array along with some data related to the person.
+Start by selecting a random person from the people array in data.js using Math.random.
+Each person has, among other attributes, a friends array containing the IDs of some buddies, who also happen to be persons inside the people array.
 Use the random person to construct the inside of the friends div in the following format:
-
-```html
+Copy
 <div class="friends widget">
   <h3>Friends</h3>
   <p>Michael Chen was born in 1995 and is friends with Carlos Garcia, Mohammed Ali and Jason Wong.</p>
 </div>
-```
-
 Note how the string is formatted, taking careful note of punctuation and proper placement of the "and" before the last friend.
-
-The friends mentioned in the p tag come from the `friends` property of the randomly selected person.
-
-In the example above, Carlos Garcia, Mohammed Ali, and Jason Wong are the people who correspond to the IDs inside Michael Chen's `friends` array.
-
-If the person is unlucky enough not to have any friends inside their `friends` property, the paragraph renders to the DOM like so:
-
-```html
+The friends mentioned in the p tag come from the friends property of the randomly selected person.
+In the example above, Carlos Garcia, Mohammed Ali, and Jason Wong are the people who correspond to the IDs inside Michael Chen's friends array.
+If the person is unlucky enough not to have any friends inside their friends property, the paragraph renders to the DOM like so:
+Copy
 <p>Luis Gonzalez was born in 1990 and has no friends.</p>
 ```
 
