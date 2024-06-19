@@ -72,7 +72,7 @@ widgets[0].appendChild(authorDiv);
 let randomIdx = Math.floor(Math.random() * people.length);
 let randomPerson = people[randomIdx];
 
-// Parse the birth year from the dateOfBirth property
+//birth year from the dateOfBirth property
 let birthYear = new Date(randomPerson.dateOfBirth).getFullYear();
 
 // Construct the content based on the person's friends
