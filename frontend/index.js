@@ -11,9 +11,9 @@ function moduleProject1() {
     // 👇 WORK WORK BELOW THIS LINE 👇
 
     // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
-    const elems = document.querySelectorAll('div');
-    for (let i = 0; i < elems.length; i++) {
-        elems[i].classList.add('widget');
+    const element = document.querySelectorAll('div');
+    for (let i = 0; i < element.length; i++) {
+        element[i].classList.add('widget');
     }
     let widgets = document.querySelectorAll('.widget');
 
